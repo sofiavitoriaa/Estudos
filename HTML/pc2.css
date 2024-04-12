@@ -1,77 +1,112 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: "Fresh";
+    src: url("Fresh Night.otf") format("opentype");
+    font-weight: normal;
+}
+
+:root {
+    --cor1: #F2D5E5;
+    --cor2: #F2C9E0;
+    --cor3: #D98FAA;
+    --cor4: #D96C94;
+    --cor5: #BF3F61;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-fresh: 'Fresh', cursive;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right,#005A5B, #008C72);
-    margin: auto;
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrao);
 }
 
 header {
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
+    padding: 25px;
+    min-height: 50px;
+    border-radius: 5px 5px 0px 0px;
     text-align: center;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin-bottom: 30px;
+    padding: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px #02A676;
-    width: 600px;
-    padding: 10px;
-    margin: 10px;
+    margin: auto;
+
 }
 
-
-#peças {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px #02A676;
-    width: 600px;
-    padding: 10px;
-    margin: 10px;
+main > section > h2 {
+    font-family: var(--fonte-fresh);
+    color: var(--cor4);
+    font-size: 2em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
 }
 
-#itens {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px #02A676;
-    width: 600px;
-    padding: 10px;
-    margin: 10px;
+main > section > ol {
+    margin: 15px 0px;
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5em;
+    list-style-type: " ";
+    list-style-position: inside;
 }
 
-
-h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-}
-
-footer {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px #02A676;
-    width: 600px;
-    padding: 10px;
-    margin: 10px;
-}
-
-nav {
-    border: #02A676;
-    border-style: dashed;
-    padding: 0px;
-    margin: 0px;
+main > section > ul {
+    font-size: 0.5em;
+    list-style-type: "\2605";
+    list-style-position: inside;
 }
 
 nav > a {
+    color: var(--cor2);
+    padding: 5px;
+    border-radius: 5px;
     text-decoration: none;
-    color:  black;
-    margin-right: 30px;
+    font-weight: bold;
+    transition-duration: 0.5s;
 }
 
 nav > a:hover {
-    text-decoration: underline;
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+footer {
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor4));
+    color: white;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+    text-align: center;
+}
+
+footer > section > h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 1.8em;
+    font-weight: normal;
 }
 
 del {
-    color: rgb(3, 126, 3);
+    color: var(--cor5);
 }
