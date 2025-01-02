@@ -31,20 +31,52 @@
         header > h1 {
             background-color: white;
         }
-        main {
-            padding: 10px;
-            margin: 10px;
-            border-radius: 10px;
-            background-color: white;
-            
+        .shopping-list {
+            list-style-type: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        main > ol > li {
-            background-color: white;
+
+        .shopping-list li {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s;
+        }
+
+        .shopping-list li:last-child {
+            border-bottom: none;
+        }
+
+        .shopping-list input[type="checkbox"] {
+            margin-right: 12px;
+            transform: scale(1.5);
+        }
+
+        .shopping-list li.concluido {
+            text-decoration: line-through;
+            background-color: #e0f7e9;
+        }
+
+        .shopping-list li:hover {
+            background-color: #f5f5f5;
+        }
+
+        .item-text {
+            flex: 1;
         }
         footer {
             text-align: center;
             background-color: white; 
             border-radius: 5px;
+            margin: 10px;
+            padding: 5px;
         }
     </style>
 </head>
@@ -54,16 +86,50 @@
         <h1> Lista de compras pro Upgrade do PC </h1>
     </header>
     <main>
-        <ol>
-            <li> Placa mãe: <a href="https://www.amazon.com.br/gp/product/B08BN8VD23/ref=ox_sc_saved_title_5?smid=A1O9IV3I71XFCQ&psc=1" target="_blank" class="extenal"> Placa Mãe Gigabyte B550M AORUS Elite </a> </li>
-            <li> Processador: <a href="https://www.amazon.com.br/gp/product/B091J3NYVF/ref=ox_sc_saved_title_1?smid=A33907XA4M70A9&psc=1" target="_blank" class="externo"> AMD Ryzen 7 5700G </a> </li>
-            <li> Fonte: <a href="https://www.kabum.com.br/produto/149856/fonte-draxen-gamer-atx-700w-80-plus-bronze-pfc-ativo-dn700-bronze" target="_blank" class="external"> Fonte Draxen Gamer ATX, 700W, 80 Plus Bronze </a></li>
-            <li> Memória ram: <a href="https://www.kabum.com.br/produto/172365/memoria-ram-kingston-fury-beast-8gb-3200mhz-ddr4-cl16-preto-kf432c16bb-8" target="_blank" class="extenal"> Memória RAM Kingston Fury Beast, 8GB, 3200MHz, DDR4 </a> </li>
-            <li></li>
+        <ul class="shopping-list">
+            <li>
+                <input type="checkbox" id="item1">
+                <label for="item1" class="item-text"> Placa mãe </label>
+            </li>
+            <li> 
+                <input type="checkbox" class="item2">
+                <label for="item2" class="item-text"> Processador: </label>
+            </li>
+            <li> <input type="checkbox" class="item3">
+                <label for="item3" class="item-text"> Fonte: </label>
+            </li>
+            <li> <input type="checkbox" class="item4">
+                <label for="item4" class="item-text"> Memória ram: </label>
+            </li>
+            <li>
+                <input type="checkbox" class="item5">
+                <label for="item5"> SSD </label>
+            </li>
+            <li>
+                <input type="checkbox" class="item6">
+                <label for="item6" class="item-text"> Cooler </label>
+            </li>
 
-        </ol>
+        </ul>
+        <script>
+            const checkboxes = document.querySelectorAll('.shopping-list input[type="checkbox"]');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const listItem = this.parentElement;
+                    if (this.checked) {
+                        listItem.classList.add('concluido');
+                    } else {
+                        listItem.classList.remove('concluido');
+                    }
+                });
+            });
+        </script>
     </main>
     <footer>
+        <nav>
+            <a href="links.html"> &#x27A1; Links &#x2B05; </a>
+        </nav>
         <p> Criado por: Soso, a mais mais &#x1F48B; </p>
     </footer>
 </body>
