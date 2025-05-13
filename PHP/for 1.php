@@ -117,7 +117,7 @@ for ($k = $j - 1; $k > 0; $k--) {
 }
 echo "O fatorial de $j é $fatorial.";
 echo "<br>";
-                                                                                                                                      
+
 /* Exercício 9:
 Escreva um programa em PHP que verifique se um número é primo. */
 echo "<br>";
