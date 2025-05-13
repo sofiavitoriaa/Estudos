@@ -9,4 +9,7 @@
     echo "<br>";
 
     echo "<h1> Arquivo index </h1>";
+
+    echo saudacao ();
+    echo resumirTexto();
 ?>
