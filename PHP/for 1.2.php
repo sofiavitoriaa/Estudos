@@ -15,8 +15,7 @@ if ($a==0) {
 }
 
 /* Questão 2:
-Situação: Você está fazendo uma rotina de exercícios e deseja contar o número de
-repetições restantes para cada exercício. Imprima o número de repetições restantes para
+Situação: Você está fazendo uma rotina de exercícios e deseja contar o número de repetições restantes para cada exercício. Imprima o número de repetições restantes para
 cada série, começando em 15 e indo até 1. */
 echo "<br> <br>";
 echo "EXERCÍCIO 2.2";
@@ -31,8 +30,7 @@ if ($b==0) {
 }
 
 /* Questão 3:
-Situação: Você está cozinhando um bolo e precisa de uma contagem regressiva para o
-tempo de cozimento. Imprima os minutos restantes, começando em 60 e indo até 1. */
+Situação: Você está cozinhando um bolo e precisa de uma contagem regressiva para o tempo de cozimento. Imprima os minutos restantes, começando em 60 e indo até 1. */
 echo "<br> <br>";
 echo "EXERCÍCIO 2.3";
 echo "<br> <br>";
